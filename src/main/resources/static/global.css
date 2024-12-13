@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    border: 0;
+    margin: 0;
+}
+
+.menu{
+    background-color: #447495;
+    height: 100vh;
+    width: 15vw;
+}
+
+.barrasuperior{
+    background-color: #fafafa;
+    width: 85vw;
+    height: 8vh;
+}
