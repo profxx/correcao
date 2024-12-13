@@ -15,3 +15,35 @@ body{
     width: 85vw;
     height: 8vh;
 }
+.central{
+    padding: 5%;
+    display: flex;
+    height: 92vh;
+    width: 85vw;
+}
+.cursos{
+    width: 40vw;
+    height: 95%;
+}
+.cursos .titulo{
+    color: gray;
+}
+li{
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 12px;
+    width: 600px;
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cadastrar{
+    width: 40vw;
+    height: 95%;
+    background-color: #fafafa;
+    padding: 12px;
+    border-radius: 10px;
+}
