@@ -24,6 +24,11 @@ public class CursoService {
         return cursoRepository.findById(id).orElse(null);
     }
 
+    // Cadastrar novo curso
+    public Curso insertNew(Curso curso){
+        return cursoRepository.save(curso);
+    }
+
     // Deletar curso
     public Boolean deleteById(Long id){
         Curso curso = findById(id);

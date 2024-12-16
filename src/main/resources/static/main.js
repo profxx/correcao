@@ -12,7 +12,10 @@ function convertCursoToLi(curso){
     </li>
     `
 }
-function cadastrar(){}
+function cadastrar(){
+    alert("Cadastrado com sucesso!");
+}
+
 function listar(){
 let lista = document.getElementById("lista");
 fetch("/cursos")
