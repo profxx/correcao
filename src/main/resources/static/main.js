@@ -13,7 +13,33 @@ function convertCursoToLi(curso){
     `
 }
 function cadastrar(){
-    alert("Cadastrado com sucesso!");
+
+    const nome = document.getElementById("nome").value.trim();
+    const categoria = document.getElementById("categoria").value.trim();
+    const carga = document.getElementById("carga").value.trim();
+
+    if (!nome || !categoria || !carga){
+        alert("Todos os campos devem ser preenchidos");
+        return;
+    }
+
+
+    fetch("/cursos", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            "nome": nome,
+            "categoria": categoria,
+            "horas": carga
+        })
+    }).then(() => {
+        alert("Cadastrado com sucesso!");
+        document.getElementById("nome").value = "";
+        document.getElementById("carga").value = "";
+        document.getElementById("categoria").value = "";
+        listar();
+    }
+    )
 }
 
 function listar(){
@@ -22,3 +48,5 @@ fetch("/cursos")
     .then((response) => response.json())
     .then((jsonresponse) => lista.innerHTML = jsonresponse.map(convertCursoToLi).join(""))
 }
+
+listar();
